@@ -341,10 +341,12 @@ info@webstersbooksandcafe.com</p>
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Book for events!</h2>
 
-          <!--   <form class="form-inline d-flex">
-              <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-              <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-            </form> -->
+            <form id="hkpaform" class="form-inline d-flex" action="" method="POST" target="_self" autocomplete="on">
+              <input type="firstname" id="firstname" name="firstname"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="firstname...">
+              <input type="lastname" id="lastname" name="lastname"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="lastname...">
+              <input type="email" id="email" name="email"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="Enter email address...">
+              <input type="submit" id="form-submit" class="btn btn-primary mx-auto">Subscribe</input>
+            </form>
 
           </div>
         </div>
@@ -399,6 +401,27 @@ info@webstersbooksandcafe.com</p>
         Copyright &copy; This is New Jerusalem 2018
       </div>
     </footer>
+
+
+
+   <script>
+       $('#input-form').one('submit',function(){
+           var v1 = encodeURIComponent($('#firstname').val());
+           var v2 = encodeURIComponent($('#lastname').val());
+           var q1 = "entry.427740901";
+           var q2 = "entry.713370524";
+           var baseURL = 'https://docs.google.com/spreadsheets/d/15TCHXG8FBuLJj8wsEhX-c8CoTdO5dhJA4Mn3uZ7ar2s/edit#gid=0';
+           var submitRef = '&submit=-676819381632821464';
+           var submitURL = (baseURL + q1 + "=" + v1 + "&" + q2 + "=" + v2 + submitRef);
+           console.log(submitURL);
+           $(this)[0].action=submitURL;
+           $('#input-feedback').text('Thank You!');
+       });
+   </script>
+
+     <!-- Custom Theme JavaScript -->
+     <script src='google-sheet.js'></script>
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
