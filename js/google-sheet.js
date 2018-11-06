@@ -2,7 +2,7 @@
 var request;
 
 // Bind to the submit event of our form
-$("#hkpaform").submit(function(event){
+$("#goodnews").submit(function(event){
 
     // Abort any pending request
     if (request) {
@@ -40,7 +40,7 @@ $("#hkpaform").submit(function(event){
         console.log(textStatus);
         console.log(jqXHR);
     //location.reload();
-    window.location.href = "success.html";
+    window.location.href = "subscribed.html";
 
     });
 

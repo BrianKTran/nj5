@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
+ 
     <title>This is New Jerusalem</title>
 
     <!-- Bootstrap core CSS -->
@@ -21,6 +21,7 @@
     <!-- Custom styles for this template -->
     <link href="css/grayscale.min.css" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
   </head>
 
   <body id="page-top">
@@ -340,12 +341,12 @@ info@webstersbooksandcafe.com</p>
 
             <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
             <h2 class="text-white mb-5">Book for events!</h2>
-
-            <form id="hkpaform" class="form-inline d-flex" action="" method="POST" target="_self" autocomplete="on">
+ 
+            <form id="goodnews" name="goodnews" class="form-inline d-flex" action="#" method="post"  >
               <input type="firstname" id="firstname" name="firstname"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="firstname...">
               <input type="lastname" id="lastname" name="lastname"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="lastname...">
               <input type="email" id="email" name="email"  class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0"  placeholder="Enter email address...">
-              <input type="submit" id="form-submit" class="btn btn-primary mx-auto">Subscribe</input>
+              <button  type="submit"  name="input-form" class="btn btn-primary mx-auto">Subscribe</button>
             </form>
 
           </div>
@@ -410,7 +411,7 @@ info@webstersbooksandcafe.com</p>
            var v2 = encodeURIComponent($('#lastname').val());
            var q1 = "entry.427740901";
            var q2 = "entry.713370524";
-           var baseURL = 'https://docs.google.com/spreadsheets/d/15TCHXG8FBuLJj8wsEhX-c8CoTdO5dhJA4Mn3uZ7ar2s/edit#gid=0';
+      var baseURL = 'https://docs.google.com/spreadsheets/d/15TCHXG8FBuLJj8wsEhX-c8CoTdO5dhJA4Mn3uZ7ar2s/edit#gid=0';
            var submitRef = '&submit=-676819381632821464';
            var submitURL = (baseURL + q1 + "=" + v1 + "&" + q2 + "=" + v2 + submitRef);
            console.log(submitURL);
@@ -420,9 +421,8 @@ info@webstersbooksandcafe.com</p>
    </script>
 
      <!-- Custom Theme JavaScript -->
-     <script src='google-sheet.js'></script>
-
-
+     <script src='js/google-sheet.js'></script>
+ <script src="js/jquery.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -432,7 +432,7 @@ info@webstersbooksandcafe.com</p>
 
     <!-- Custom scripts for this template -->
     <script src="js/grayscale.min.js"></script>
-
+    
   </body>
 
 </html>
